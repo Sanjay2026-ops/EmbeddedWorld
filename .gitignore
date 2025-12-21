@@ -1,0 +1,9 @@
+# Ignore deep project implementations for now
+IoT_Security/**/*
+IIoT/**/*
+EmbeddedLinux/**/*
+RTOS/**/*
+Microcontroller/**/*
+DeviceDriver/**/*
+!*/README.md
+
