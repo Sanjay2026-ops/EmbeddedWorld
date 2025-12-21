@@ -1,0 +1,10 @@
+auth.AuthInitRequest.serial_id  max_length:64
+auth.AuthInitRequest.signature max_length:64
+
+auth.AuthInitResponse.error_msg max_length:64
+
+auth.Challenge.nonce max_length:32
+
+auth.ChallengeResponse.serial_id  max_length:64
+auth.ChallengeResponse.signature max_length:64
+

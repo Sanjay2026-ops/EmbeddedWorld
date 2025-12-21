@@ -1,0 +1,41 @@
+syntax = "proto2";
+
+package auth;
+
+/* Step 1: Client → Server
+ * - serial_id: client ka ID (string as bytes)
+ * - signature: ECDSA signature over SHA256(serial_id)
+ * - client_pubkey: 65-byte uncompressed ECDSA pubkey (secp256k1)
+ */
+message AuthInitRequest {
+  required bytes serial_id     = 1;
+  required bytes signature     = 2;
+  required bytes client_pubkey = 3;
+}
+
+/* Step 2: Server → Client
+ * - ok: true if initial signature verified
+ * - error_msg: optional human-readable error
+ */
+message AuthInitResponse {
+  required bool ok         = 1;
+  optional string error_msg = 2;
+}
+
+/* Step 3: Server → Client
+ * - nonce: 32-byte random challenge
+ */
+message Challenge {
+  required bytes nonce = 1;
+}
+
+/* Step 4: Client → Server
+ * - serial_id: same serial id
+ * - signature: ECDSA signature over SHA256(nonce)
+ */
+message ChallengeResponse {
+  required bytes serial_id = 1;
+  required bytes signature = 2;
+}
+
+

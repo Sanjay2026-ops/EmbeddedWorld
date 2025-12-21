@@ -1,0 +1,4 @@
+/home/sanjay/Desktop/cypherock-ecdsa/cypherock-ecdsa-auth/build/CMakeFiles/server.dir
+/home/sanjay/Desktop/cypherock-ecdsa/cypherock-ecdsa-auth/build/CMakeFiles/client.dir
+/home/sanjay/Desktop/cypherock-ecdsa/cypherock-ecdsa-auth/build/CMakeFiles/edit_cache.dir
+/home/sanjay/Desktop/cypherock-ecdsa/cypherock-ecdsa-auth/build/CMakeFiles/rebuild_cache.dir
